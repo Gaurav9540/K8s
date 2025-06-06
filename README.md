@@ -84,3 +84,11 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
    - Shares storage volumes (if configured).
    - Shares the same network namespace across containers inside the pod.
 
+🔄 **How They All Work Together**
+
+ - Kubelet asks the API Server if there are any pods scheduled to this node.
+ - If there are, it pulls the container images using the container runtime.
+ - The pod is created, and the Kubelet continuously monitors its health.
+ - Kube-Proxy sets up networking so other services or pods can talk to this pod.
+
+
