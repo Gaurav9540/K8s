@@ -32,8 +32,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  - Manages the desired state for your pods (e.g., number of replicas).
  - Handles updates, rollbacks, and ensures the app stays healthy.
 
-5. *Service*
- - Provides a stable IP and DNS name to a set of pods.
+5. *Service* - Provides a stable IP and DNS name to a set of pods.
  *Types:*
    - ClusterIP (default) – for internal communication.
    - NodePort – exposes service on a static port on each node.
