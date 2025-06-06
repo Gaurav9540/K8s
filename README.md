@@ -70,6 +70,14 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
    - Docker (deprecated as of K8s v1.24+)  <br>
 📌 Kubernetes uses a Container Runtime Interface (CRI) to talk to these runtimes.
 
+*3. Kube-Proxy*
+ - Handles networking for services.
+ - Maintains iptables or IPVS rules to route traffic to appropriate pods.
+ - Ensures that each service is accessible using its ClusterIP or NodePort.  <br>
+📌 This is what allows your app to be reachable internally or externally.
+
+
+
  *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).  <br>
  *Kube-Proxy* - 	Maintains network rules and load balancing for service communication across pods and nodes.  <br>
  *Pods* -	The actual group of one or more containers running on the node.  <br>
