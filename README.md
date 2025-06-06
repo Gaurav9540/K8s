@@ -46,9 +46,16 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 <img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp" >
 
-⚙️ Kubernetes Control Plane Components
+⚙️ Kubernetes Control Plane Components: 
 
  *API Server*  - 	Frontend to Kubernetes. All requests go through this.  <br>
  *Scheduler* - 	Assigns pods to suitable nodes based on resource requirements.  <br>
  *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).  <br>
  *etcd* - 	Distributed key-value store for storing cluster data/configuration.  <br>
+
+
+ 🔧 Components of Worker Node:
+ *Kubelet* - 	Agent that runs on every node. It ensures containers are running as specified in the Pod definitions.
+ *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).
+ *Kube-Proxy* - 	Maintains network rules and load balancing for service communication across pods and nodes.
+ *Pods* -	The actual group of one or more containers running on the node.
