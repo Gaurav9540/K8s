@@ -44,4 +44,4 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 <hr>
 
-<img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp" width="900" height="400">
+<img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp" >
