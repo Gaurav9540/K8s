@@ -19,3 +19,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 1. *Cluster* - Cluster is group of master node and worker node
   - Master Node (Control Plane) – brain of the cluster, manages everything.
   - Worker Nodes – where your containers actually run.
+
+2. *Pod* - The smallest unit in Kubernetes.
+  - A pod can contain one or more tightly coupled containers.
+  - All containers in a pod share networking and storage.
