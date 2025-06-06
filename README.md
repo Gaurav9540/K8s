@@ -44,3 +44,4 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 <hr>
 
+<img src="assets/k8s-architecture" alt="assets/k8s-architecture" width="900" height="400">
