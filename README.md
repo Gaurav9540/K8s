@@ -41,3 +41,6 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 6. *Namespace*
  - Used to logically separate resources in the same cluster (multi-team or multi-project setup).
+
+<hr>
+
