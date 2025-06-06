@@ -76,8 +76,10 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  - Ensures that each service is accessible using its ClusterIP or NodePort.  <br>
 📌 This is what allows your app to be reachable internally or externally.
 
+*4. Pods*
+ - Actual execution units that run your app containers.
+ - Each pod:
+   - Has its own IP address.
+   - Shares storage volumes (if configured).
+   - Shares the same network namespace across containers inside the pod.
 
-
- *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).  <br>
- *Kube-Proxy* - 	Maintains network rules and load balancing for service communication across pods and nodes.  <br>
- *Pods* -	The actual group of one or more containers running on the node.  <br>
