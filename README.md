@@ -45,3 +45,9 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 <hr>
 
 <img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp" >
+
+⚙️ Kubernetes Control Plane Components
+
+ *API Server*  - 	Frontend to Kubernetes. All requests go through this.
+ *Scheduler* - 	Assigns pods to suitable nodes based on resource requirements.
+ *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).
