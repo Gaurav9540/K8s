@@ -37,3 +37,6 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
    - ClusterIP (default) – for internal communication.
    - NodePort – exposes service on a static port on each node.
    - LoadBalancer – exposes service externally via cloud load balancer.
+
+6. *Namespace*
+ - Used to logically separate resources in the same cluster (multi-team or multi-project setup).
