@@ -14,6 +14,6 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 🧱 **Kubernetes Core Concepts**
 
-1. Cluster - Cluster is group of master node and worker node
+1. *Cluster* - Cluster is group of master node and worker node
  - Master Node (Control Plane) – brain of the cluster, manages everything.
  - Worker Nodes – where your containers actually run.
