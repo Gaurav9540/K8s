@@ -62,6 +62,14 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  - Monitors the state of the pods and reports back to the control plane.
 📌 Think of it as the node-level manager for containers.
 
+*2. Container Runtime*
+ - Responsible for pulling container images, starting, stopping, and managing container lifecycles.
+ - Common runtimes:
+   - containerd (default for modern K8s)
+   - CRI-O
+   - Docker (deprecated as of K8s v1.24+)
+📌 Kubernetes uses a Container Runtime Interface (CRI) to talk to these runtimes.
+
  *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).  <br>
  *Kube-Proxy* - 	Maintains network rules and load balancing for service communication across pods and nodes.  <br>
  *Pods* -	The actual group of one or more containers running on the node.  <br>
