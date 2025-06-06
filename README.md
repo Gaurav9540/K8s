@@ -48,6 +48,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 ⚙️ Kubernetes Control Plane Components
 
- *API Server*  - 	Frontend to Kubernetes. All requests go through this.
- *Scheduler* - 	Assigns pods to suitable nodes based on resource requirements.
- *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).
+ *API Server*  - 	Frontend to Kubernetes. All requests go through this.  <br>
+ *Scheduler* - 	Assigns pods to suitable nodes based on resource requirements.  <br>
+ *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).  <br>
+ *etcd* - 	Distributed key-value store for storing cluster data/configuration.  <br>
