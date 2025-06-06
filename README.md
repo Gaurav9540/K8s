@@ -23,3 +23,11 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 2. *Pod* - The smallest unit in Kubernetes.
   - A pod can contain one or more tightly coupled containers.
   - All containers in a pod share networking and storage.
+
+3. *Node*
+ - A physical or virtual machine that runs your applications (pods).
+ - Every node has a Kubelet (agent), container runtime (like Docker/Containerd), and Kube-proxy.
+
+4. *Deployment*
+ - Manages the desired state for your pods (e.g., number of replicas).
+ - Handles updates, rollbacks, and ensures the app stays healthy.
