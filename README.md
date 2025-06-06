@@ -55,6 +55,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 
  🔧 Components of Worker Node:
+ 
  *Kubelet* - 	Agent that runs on every node. It ensures containers are running as specified in the Pod definitions.  <br>
  *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).  <br>
  *Kube-Proxy* - 	Maintains network rules and load balancing for service communication across pods and nodes.  <br>
