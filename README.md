@@ -59,7 +59,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  *1. Kubelet*
  - Talks to the API server on the control plane.
  - Receives PodSpecs and ensures the containers described are running and healthy.
- - Monitors the state of the pods and reports back to the control plane.
+ - Monitors the state of the pods and reports back to the control plane.   <br>
 📌 Think of it as the node-level manager for containers.
 
 *2. Container Runtime*
@@ -67,7 +67,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  - Common runtimes:
    - containerd (default for modern K8s)
    - CRI-O
-   - Docker (deprecated as of K8s v1.24+)
+   - Docker (deprecated as of K8s v1.24+)  <br>
 📌 Kubernetes uses a Container Runtime Interface (CRI) to talk to these runtimes.
 
  *Container Runtime* -	Software that runs containers (e.g., Containerd, Docker, CRI-O).  <br>
