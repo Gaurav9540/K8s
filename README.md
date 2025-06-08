@@ -49,7 +49,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 ⚙️ Kubernetes Control Plane Components: 
 
-🔹 1. API-SERVER  
+🔹 1. *API-SERVER*
 
 📌 Role: Frontend to Kubernetes. All requests go through this.
 - The API Server is the gateway to the Kubernetes cluster.
@@ -64,7 +64,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
    - Implements authentication, authorization, and admission control.
 
 
- 🔹 2. Scheduler
+ 🔹 2. *Scheduler*
  
  📌 Role: Assigns pods to suitable nodes based on resource requirements.
  -  Watches for newly created pods that don’t have a node assigned.
@@ -77,7 +77,22 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  - Key Points:
    - Doesn’t actually launch pods — just decides where they should go.
    - Scheduling decisions are written back to the API Server.
- 
+
+ 🔹 3. *Controller-Manager*
+📌 Role: Runs multiple background controllers
+A controller is a control loop that watches the cluster state via the API Server and makes changes to move the current state toward the desired state.
+
+Common Controllers:
+ - Node Controller – Detects node failures and manages node lifecycle.
+ - Replication Controller / ReplicaSet Controller – Ensures desired number of pod replicas.
+ - Deployment Controller – Manages rolling updates and rollbacks.
+ - Job Controller – Manages one-time or batch jobs.
+ - Service Account & Token Controllers – Manages default accounts and tokens.
+
+Key Points:
+ - All these controllers are compiled into a single binary (kube-controller-manager).
+ - Communicates only with the API Server.
+
  *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).  <br>
  *etcd* - 	Distributed key-value store for storing cluster data/configuration.  <br>
 
