@@ -49,7 +49,8 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 ⚙️ Kubernetes Control Plane Components: 
 
-🔹 1. API-SERVER
+🔹 1. API-SERVER  
+
 📌 Role: Frontend to Kubernetes. All requests go through this.
  - The API Server is the gateway to the Kubernetes cluster.
  - All communication to and from the control plane happens through the API Server using RESTful APIs.
