@@ -145,3 +145,44 @@ Key Points:
  - Kube-Proxy sets up networking so other services or pods can talk to this pod.
 
 <hr>
+
+
+✅ 1. User Sends a Request
+ - You use kubectl (CLI) or UI to deploy an app.
+ - Example: "Create a pod or deploy an app."
+
+✅ 2. API Server Receives It
+ - API Server is the gatekeeper.
+ - It checks if the request is valid and stores it in the system.
+
+✅ 3. Data is Stored in etcd
+ - etcd saves the desired state of the cluster (what you want to happen).
+
+✅ 4. Scheduler Finds a Node
+ - Scheduler checks: “Where should this pod run?”
+ - It picks the best worker node and updates the plan.
+
+✅ 5. Controller Manager Watches
+ - It makes sure your request actually happens.
+ - If something is missing (like a pod), it tells the API Server to fix it.
+
+✅ 6. Kubelet on Worker Node Acts
+ - Kubelet (on the chosen node) gets the pod info from the API Server.
+ - It asks Docker to run the container inside a pod.
+
+✅ 7. Docker Runs Containers
+ - Docker (or another runtime) downloads images and starts containers inside pods.
+
+✅ 8. Kube-proxy Manages Network
+ - It sets up the network rules so:
+ - Pods can talk to each other.
+ - Services can talk to pods.
+ - External users can access your app.
+
+✅ 9. Continuous Monitoring
+ - If something goes wrong (e.g., pod crashes or node fails):
+ - Controllers reschedule or restart pods.
+ - Kubelet keeps reporting health.
+
+🔁 Cluster Keeps Running Automatically
+ - The system self-heals and always tries to match the desired state.
