@@ -144,4 +144,4 @@ Key Points:
  - The pod is created, and the Kubelet continuously monitors its health.
  - Kube-Proxy sets up networking so other services or pods can talk to this pod.
 
-
+<hr>
