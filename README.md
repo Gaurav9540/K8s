@@ -49,7 +49,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 ⚙️ Kubernetes Control Plane Components: 
 
-🔹 1. *API-SERVER*
+🔹 *1. API-SERVER*
 
 📌 Role: Frontend to Kubernetes. All requests go through this.
 - The API Server is the gateway to the Kubernetes cluster.
@@ -64,7 +64,7 @@ Key Points:
    - Implements authentication, authorization, and admission control.
 
 
- 🔹 2. *Scheduler*
+ 🔹 *2. Scheduler*
  
  📌 Role: Assigns pods to suitable nodes based on resource requirements. <br>
  -  Watches for newly created pods that don’t have a node assigned.  <br>
@@ -78,7 +78,7 @@ Key Points:
    - Doesn’t actually launch pods — just decides where they should go.
    - Scheduling decisions are written back to the API Server.
 
- 🔹 3. *Controller-Manager*
+ 🔹 *3. Controller-Manager*
 📌 Role: Runs multiple background controllers
 A controller is a control loop that watches the cluster state via the API Server and makes changes to move the current state toward the desired state.
 
@@ -93,8 +93,16 @@ Key Points:
  - All these controllers are compiled into a single binary (kube-controller-manager).
  - Communicates only with the API Server.
 
- *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).  <br>
- *etcd* - 	Distributed key-value store for storing cluster data/configuration.  <br>
+🔹 *4. etcd*
+📌 Role: Distributed key-value store for storing cluster data/configuration.
+ - Acts as the single source of truth for the cluster.
+ - Stores all configuration data, state, and metadata of the cluster.
+ - Used by the API Server to read and persist the state of all Kubernetes objects.
+
+Key Points:
+ - available and consistent (uses the Raft consensus algorithm).
+ - Back up regularly — loss of etcd data can be catastrophic.
+ - Only directly accessed by the API server (other components go through API server).
 
 
  🔧 Components of Worker Node:
