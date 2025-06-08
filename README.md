@@ -63,8 +63,21 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
    - Communicates using JSON over HTTP.
    - Implements authentication, authorization, and admission control.
 
+
+ 🔹 2. Scheduler
  
- *Scheduler* - 	Assigns pods to suitable nodes based on resource requirements.  <br>
+ 📌 Role: Assigns pods to suitable nodes based on resource requirements.
+ -  Watches for newly created pods that don’t have a node assigned.
+ - Selects the best node for the pod based on:
+  - Resource requirements (CPU, memory, etc.)
+  - Node taints and tolerations
+  - Node selectors
+  - Pod topology constraints
+
+ - Key Points:
+   - Doesn’t actually launch pods — just decides where they should go.
+   - Scheduling decisions are written back to the API Server.
+ 
  *Controller Manager* - 	Ensures cluster state matches the desired state (e.g., ReplicaSet controller).  <br>
  *etcd* - 	Distributed key-value store for storing cluster data/configuration.  <br>
 
