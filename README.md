@@ -66,7 +66,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
  🔹 2. *Scheduler*
  
- 📌 Role: Assigns pods to suitable nodes based on resource requirements.
+ 📌 Role: Assigns pods to suitable nodes based on resource requirements. <br>
  -  Watches for newly created pods that don’t have a node assigned.
 Selects the best node for the pod based on:
   - Resource requirements (CPU, memory, etc.)
