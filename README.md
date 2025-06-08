@@ -58,7 +58,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 - Stores the state of the cluster in etcd.
 - All kubectl, controller manager, scheduler, and other control plane components interact with the API Server.
 
-  - Key Points:
+ - Key Points:
    - Stateless and scalable (you can run multiple instances).
    - Communicates using JSON over HTTP.
    - Implements authentication, authorization, and admission control.
