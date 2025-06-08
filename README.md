@@ -146,6 +146,7 @@ Key Points:
 
 <hr>
 
+**WorkFlow of Kubernetes Architecture :**
 
 ✅ 1. User Sends a Request
  - You use kubectl (CLI) or UI to deploy an app.
