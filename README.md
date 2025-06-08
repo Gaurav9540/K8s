@@ -100,9 +100,9 @@ Key Points:
  - Used by the API Server to read and persist the state of all Kubernetes objects.
 
 Key Points:
-  - available and consistent (uses the Raft consensus algorithm).
-  - Back up regularly — loss of etcd data can be catastrophic.
-  - Only directly accessed by the API server (other components go through API server).
+   - available and consistent (uses the Raft consensus algorithm).
+   - Back up regularly — loss of etcd data can be catastrophic.
+   - Only directly accessed by the API server (other components go through API server).
 
 
  🔧 Components of Worker Node:
