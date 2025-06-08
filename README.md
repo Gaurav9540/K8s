@@ -93,7 +93,7 @@ Key Points:
  - All these controllers are compiled into a single binary (kube-controller-manager).
  - Communicates only with the API Server.
 
-🔹 *4. etcd*
+🔹 *4. etcd* <br>
 📌 Role: Distributed key-value store for storing cluster data/configuration.
  - Acts as the single source of truth for the cluster.
  - Stores all configuration data, state, and metadata of the cluster.
