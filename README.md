@@ -51,7 +51,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 🔹 *1. API-SERVER*
 
-📌 Role: Frontend to Kubernetes. All requests go through this.
+📌 Role: Frontend to Kubernetes. All requests go through this. 
 - The API Server is the gateway to the Kubernetes cluster.
 - All communication to and from the control plane happens through the API Server using RESTful APIs.
 - Validates and processes REST requests (like creating pods, services, etc.).
@@ -78,7 +78,8 @@ Key Points:
    - Doesn’t actually launch pods — just decides where they should go.
    - Scheduling decisions are written back to the API Server.
 
- 🔹 *3. Controller-Manager*
+ 🔹 *3. Controller-Manager* 
+ 
 📌 Role: Runs multiple background controllers
 A controller is a control loop that watches the cluster state via the API Server and makes changes to move the current state toward the desired state.
 
@@ -93,7 +94,8 @@ Key Points:
  - All these controllers are compiled into a single binary (kube-controller-manager).
  - Communicates only with the API Server.
 
-🔹 *4. etcd* <br>
+🔹 *4. etcd*
+
 📌 Role: Distributed key-value store for storing cluster data/configuration.
  - Acts as the single source of truth for the cluster.
  - Stores all configuration data, state, and metadata of the cluster.
