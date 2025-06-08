@@ -68,13 +68,13 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
  
  📌 Role: Assigns pods to suitable nodes based on resource requirements.
  -  Watches for newly created pods that don’t have a node assigned.
- - Selects the best node for the pod based on:
+Selects the best node for the pod based on:
   - Resource requirements (CPU, memory, etc.)
   - Node taints and tolerations
   - Node selectors
   - Pod topology constraints
 
- - Key Points:
+  Key Points:
    - Doesn’t actually launch pods — just decides where they should go.
    - Scheduling decisions are written back to the API Server.
 
