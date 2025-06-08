@@ -106,6 +106,7 @@ Key Points:
    - Back up regularly — loss of etcd data can be catastrophic.
    - Only directly accessed by the API server (other components go through API server).
 
+<hr>
 
  🔧 Components of Worker Node:
  
