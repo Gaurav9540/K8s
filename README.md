@@ -3,7 +3,7 @@
 
 **What is Kubernetes ?**
 
- - Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+ - Kubernetes, also known as K8s, Kubernetes is an open-source container orchestration platform thatautomates the deployment, scaling, and management of containerized applications.
 
  - Developed by Google and now maintained by the Cloud Native Computing Foundation (CNCF) and released as open-source in 2014.
 
