@@ -191,9 +191,12 @@ Key Points:
 <hr>
 Kubernetes objects:
 
-In Kubernetes, objects are persistent entities in the cluster that represent the desired state of resources. These are the building blocks used to deploy and manage applications and workloads.
+Kubernetes objects define and manage the state of your cluster, controlling how applications run, how they comminucate, and how they store data.
 
-🔹 1. Pod
- - Smallest and simplest unit in Kubernetes.
- - Represents one or more containers that share storage, network, and a specification for how to run.
- - Usually runs one application container.
+1. Workload Objects
+
+   1.1 Pod
+    - Smallest and simplest unit in Kubernetes.
+    - Represents one or more containers that share storage, network, and a specification for how to run.
+    - Usually runs one application container.
+
