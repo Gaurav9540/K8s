@@ -187,3 +187,13 @@ Key Points:
 
 🔁 Cluster Keeps Running Automatically
  - The system self-heals and always tries to match the desired state.
+
+<hr>
+Kubernetes objects:
+
+In Kubernetes, objects are persistent entities in the cluster that represent the desired state of resources. These are the building blocks used to deploy and manage applications and workloads.
+
+🔹 1. Pod
+ - Smallest and simplest unit in Kubernetes.
+ - Represents one or more containers that share storage, network, and a specification for how to run.
+ - Usually runs one application container.
