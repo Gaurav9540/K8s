@@ -211,7 +211,7 @@ spec:
       image: nginx
 ```
 
-   1.2 Deployment
-    - Manages ReplicaSets and Pods.
-    - Supports rolling updates, rollbacks, and more.
-    - Most commonly used object for managing apps.
+    1.2 Deployment
+     - Manages ReplicaSets and Pods.
+     - Supports rolling updates, rollbacks, and more.
+     - Most commonly used object for managing apps.
