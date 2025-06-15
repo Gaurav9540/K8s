@@ -200,3 +200,13 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
     - Represents one or more containers that share storage, network, and a specification for how to run.
     - Usually runs one application container.
 
+```ssh
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myapp
+      image: nginx
+```
