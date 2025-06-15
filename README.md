@@ -204,3 +204,26 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
     - Manages ReplicaSets and Pods.
     - Supports rolling updates, rollbacks, and more.
     - Most commonly used object for managing apps.
+  
+   1.3 StatefulSet
+    - Manages stateful applications like databases.
+    - Each Pod has a stable identity and persistent storage.
+  
+   1.4 DaemonSet
+    - Ensures a copy of a Pod runs on every node (or specific nodes).
+    - Used for log collection, monitoring agents, etc.
+  
+   1.5 Job and CronJob
+    - Job: runs a task once until complete.
+    - CronJob: runs scheduled jobs (like a cron task).
+
+2. Networking Objects
+
+   2.1 Service
+    - Exposes your Pods to other services or external traffic.
+    - Types:
+      - ClusterIP: internal access only.
+      - NodePort: exposes via port on each Node.
+      - LoadBalancer: uses cloud provider’s LB.
+      - ExternalName: maps to external DNS.
+
