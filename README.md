@@ -232,3 +232,45 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
     - Manages external access to Services, typically HTTP/HTTPS.
     - Acts like a reverse proxy with routing rules.
     - Requires an Ingress Controller (e.g., NGINX, Traefik).
+  
+   2.3 NetworkPolicy
+    - Controls network traffic between Pods.
+    - Implements firewall-like rules.
+    - You must use a network plugin that supports policies (like Calico).
+
+
+3. Storage Objects
+
+   3.1 PersistentVolume (PV)
+    - Represents actual storage in the cluster (e.g., disk, NFS, cloud volume).
+    - Created by admins or dynamic provisioners.
+    - Independent of any specific Pod.
+
+   3.2 PersistentVolumeClaim (PVC)
+    - Request for storage by a user.
+    - Binds to a matching PV.
+    - Pods use PVCs to get storage without worrying about underlying details.
+  
+   3.3 ConfigMap
+    - Stores configuration data (non-sensitive).
+    - Can be injected into Pods as environment variables or volumes.
+  
+   3.4 Secret
+    - Stores sensitive data like passwords, tokens, keys.
+    - Data is base64 encoded.
+
+
+4. Cluster Management Object
+
+   4.1 Namespace
+    - Used to divide cluster resources logically (like virtual clusters).
+    - Helps isolate teams, environments (dev, test, prod), or projects.
+
+   4.2 ResourceQuota
+    - Limits the amount of resources (CPU, memory, storage) a namespace can use.
+    - Helps prevent a team/project from consuming all cluster resources.
+  
+   4.3 LimitRange
+    - Sets default and maximum resource limits for containers in a namespace.
+    - Prevents overuse of resources by individual pods.
+   
