@@ -217,6 +217,7 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
     - Job: runs a task once until complete.
     - CronJob: runs scheduled jobs (like a cron task).
 
+
 2. Networking Objects
 
    2.1 Service
@@ -227,3 +228,7 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
       - LoadBalancer: uses cloud provider’s LB.
       - ExternalName: maps to external DNS.
 
+   2.2 Ingress
+    - Manages external access to Services, typically HTTP/HTTPS.
+    - Acts like a reverse proxy with routing rules.
+    - Requires an Ingress Controller (e.g., NGINX, Traefik).
