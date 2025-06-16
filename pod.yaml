@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: spider
+  namespace: mywork
+  labels:
+    env: dev
+    app: myworkapp
+spec:
+  containers:
+    - name: spider
+      image: nginx
+      ports:
+        - containerPort: 80
