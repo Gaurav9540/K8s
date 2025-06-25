@@ -420,6 +420,8 @@ kubectl apply -f role.yml
 kubectl apply -f rolebinding.yml
 ```
 
+<hr>
+
 9. Testing
 
 Check spiderman user can list pods or not and check with non allowed permissions
