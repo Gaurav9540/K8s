@@ -328,6 +328,7 @@ openssl req -new -key spider.key -out spider.csr
 openssl x509 -req -in spider.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out spider.crt -days 365
 ```
 
+
 **Create a user**
 
 4. Set a user entry in kubeconfig
@@ -360,8 +361,5 @@ Switching to the spiderman user:
 kubectl config use-context spiderman
 ```
 
-🛠️ Basic Example:
 
-User spiderman can ["get", "create", "watch", "list"] pods in the default namespace.
-
-
+**Grant access to the user**
