@@ -293,3 +293,7 @@ It lets you control access based on:  <br>
  - Protect your cluster from unauthorized access
  - Enforce least-privilege access
  - Separate team access (e.g., devs, ops, CI/CD)
+
+🛠️ Basic Example:
+
+User spiderman can ["get", "create", "watch", "list"] pods in the default namespace.
