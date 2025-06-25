@@ -45,7 +45,7 @@ Imagine you have an app running in a Docker container. Now, imagine you need to 
 
 <hr>
 
-<img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp" >
+<img src="assests/k8s-architecture.webp" alt="assests/k8s-architecture.webp">
 
 ⚙️ Kubernetes Control Plane Components: 
 
@@ -420,3 +420,5 @@ kubectl apply -f rolebinding.yml
 9. Testing
 
 Check spiderman user can list pods or not and check with non allowed permissions
+
+<img src="assests/rbac-1.png" alt="assests/rbac-1.png" >
