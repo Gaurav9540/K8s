@@ -302,13 +302,13 @@ It lets you control access based on:  <br>
 
 ```ssh
 | Concept            | Authentication 🔐                      | Authorization 🛡️                       |
-| ------------------ | -------------------------------------- | --------------------------------------- |
-| **What is it?**    | Verifying **who** you are              | Verifying **what** you're allowed to do |
-| **Answer to?**     | “Are you really `spiderman`?”          | “Can `spiderman` list pods?”            |
-| **Happens first?** | ✅ Yes                                  | ➡️ Only after successful authentication |
-| **Mechanisms**     | Certificates, tokens, passwords        | RBAC, ABAC, policies                    |
-| **K8s Example**    | TLS client certificate proves identity | RBAC RoleBinding grants pod access      |
-| **Failure case**   | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
+| ------------------ | --------------------------------------  | --------------------------------------- |
+|  What is it?       | Verifying who you are                   | Verifying what you're allowed to do     |
+|  Answer to?        | “Are you really `spiderman`?”           | “Can `spiderman` list pods?”            |
+|  Happens first?    | ✅ Yes                                  | ➡️ Only after successful authentication |
+|  Mechanisms        | Certificates, tokens, passwords         | RBAC, ABAC, policies                    |
+|  K8s Example       | TLS client certificate proves identity  | RBAC RoleBinding grants pod access      |
+|  Failure case      | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
 ```
 
 🛠️ Basic Example:
