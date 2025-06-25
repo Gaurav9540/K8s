@@ -298,6 +298,19 @@ It lets you control access based on:  <br>
  - Enforce least-privilege access
  - Separate team access (e.g., devs, ops, CI/CD)
 
+🔑 Authentication vs Authorization <br>
+
+```ssh
+| Concept            | Authentication 🔐                      | Authorization 🛡️                       |
+| ------------------ | -------------------------------------- | --------------------------------------- |
+| **What is it?**    | Verifying **who** you are              | Verifying **what** you're allowed to do |
+| **Answer to?**     | “Are you really `spiderman`?”          | “Can `spiderman` list pods?”            |
+| **Happens first?** | ✅ Yes                                  | ➡️ Only after successful authentication |
+| **Mechanisms**     | Certificates, tokens, passwords        | RBAC, ABAC, policies                    |
+| **K8s Example**    | TLS client certificate proves identity | RBAC RoleBinding grants pod access      |
+| **Failure case**   | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
+```
+
 🛠️ Basic Example:
 
 User spiderman can ["get", "create", "watch", "list"] pods in the default namespace.
