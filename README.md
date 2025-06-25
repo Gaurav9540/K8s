@@ -421,4 +421,6 @@ kubectl apply -f rolebinding.yml
 
 Check spiderman user can list pods or not and check with non allowed permissions
 
-<img src="assests/rbac-1.png" alt="assests/rbac-1.png" >
+<img src="assests/rbac-1.png" alt="assests/rbac-1.png">
+
+<img src="assests/rbac-2.png" alt="assests/rbac-2.png">
