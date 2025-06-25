@@ -298,7 +298,7 @@ It lets you control access based on:  <br>
  - Enforce least-privilege access
  - Separate team access (e.g., devs, ops, CI/CD)
 
-🔑 Authentication vs Authorization <br>
+🔑 Authentication vs Authorization: <br>
 
 ```ssh
 | Concept            | Authentication 🔐                      | Authorization 🛡️                       |
@@ -311,6 +311,16 @@ It lets you control access based on:  <br>
 |  Failure case      | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
 ```
 
+
+Create Key For User Authentication:
+```ssh
+openssl genrsa -out spider.key 2048
+```
+
+
+
 🛠️ Basic Example:
 
 User spiderman can ["get", "create", "watch", "list"] pods in the default namespace.
+
+
