@@ -312,12 +312,30 @@ It lets you control access based on:  <br>
 ```
 
 
-Create Key For User Authentication:
+1. Create private key for user authentication:
 ```ssh
 openssl genrsa -out spider.key 2048
 ```
 
+2. Request for certificate:
+```ssh
+openssl req -new -key spider.key -out spider.csr
+```
 
+3. Generate the certificate(CRT)
+```ssh
+openssl x509 -req -in spider.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out spider.crt -days 365
+```
+
+4. Set a user entry in kubeconfig
+```ssh
+kubectl config set-credentials spiderman --client-certificate=spider.crt --client-key=spider.key
+```
+
+5. Set a context entry in kubeconfig
+```ssh
+kubectl config set-context spiderman --cluster=minikube --user=spiderman --namespace=default
+```
 
 🛠️ Basic Example:
 
