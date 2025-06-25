@@ -406,7 +406,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Deploy both the role.yaml and role-binding.yaml to k8s
+Deploy both the role.yaml and role-binding.yaml
 
 ```ssh
 kubectl apply -f role.yml
@@ -415,4 +415,4 @@ kubectl apply -f rolebinding.yml
 
 9. Testing
 
-Check spiderman user can list pods or not 
+Check spiderman user can list pods or not and check with non allowed permissions
