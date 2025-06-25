@@ -288,3 +288,8 @@ It lets you control access based on:  <br>
  - Can do what (verbs like get, list, create)
  - On what (resources like pods, deployments)
  - Where (namespaces or cluster-wide)
+
+🎯 Why Use RBAC? <br>
+ - Protect your cluster from unauthorized access
+ - Enforce least-privilege access
+ - Separate team access (e.g., devs, ops, CI/CD)
