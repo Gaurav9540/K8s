@@ -311,13 +311,14 @@ It lets you control access based on:  <br>
 |  Failure case      | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
 ```
 
+**Create a client certificate**
 
-1. Create private key for user authentication:
+1. Generate a private key using OpenSSL:
 ```ssh
 openssl genrsa -out spider.key 2048
 ```
 
-2. Request for certificate:
+2. Generate a Client Sign Request (CSR):
 ```ssh
 openssl req -new -key spider.key -out spider.csr
 ```
@@ -327,6 +328,8 @@ openssl req -new -key spider.key -out spider.csr
 openssl x509 -req -in spider.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out spider.crt -days 365
 ```
 
+**Create a user**
+
 4. Set a user entry in kubeconfig
 ```ssh
 kubectl config set-credentials spiderman --client-certificate=spider.crt --client-key=spider.key
@@ -335,6 +338,26 @@ kubectl config set-credentials spiderman --client-certificate=spider.crt --clien
 5. Set a context entry in kubeconfig
 ```ssh
 kubectl config set-context spiderman --cluster=minikube --user=spiderman --namespace=default
+```
+
+Check that it is successfully added to kubeconfig:
+```ssh
+kubectl config view
+```
+
+Check present users:
+```ssh
+kubectl config get-users
+```
+
+Check current user
+```ssh
+kubectl config get-contexts
+```
+
+Switching to the spiderman user:
+```ssh
+kubectl config use-context spiderman
 ```
 
 🛠️ Basic Example:
