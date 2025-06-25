@@ -388,7 +388,7 @@ rules:
 
 8. Create a BindingRole
 
-bindrole.yml:
+rolebinding.yml:
 ```ssh
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -407,7 +407,11 @@ roleRef:
 
 Deploy both the role.yaml and role-binding.yaml to k8s
 
+```ssh
+kubectl apply -f role.yml
+kubectl apply -f rolebinding.yml
+```
 
 9. Testing
 
-check spiderman user can list pods or not 
+Check spiderman user can list pods or not 
