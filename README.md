@@ -360,6 +360,10 @@ Check current user
 kubectl config get-contexts
 ```
 
+<hr>
+
+**Switch User**
+
 6. Switching to the spiderman user:
 ```ssh
 kubectl config use-context spiderman
