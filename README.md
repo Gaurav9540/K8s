@@ -422,7 +422,7 @@ kubectl apply -f rolebinding.yml
 
 <hr>
 
-9. Testing
+9. Testi using spiderman user
 
 Check spiderman user can list pods or not and check with non allowed permissions
 
