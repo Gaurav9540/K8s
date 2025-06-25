@@ -299,7 +299,6 @@ It lets you control access based on:  <br>
  - Enforce least-privilege access
  - Separate team access (e.g., devs, ops, CI/CD)
 
-<hr>
 
 🔑 Authentication vs Authorization: <br>
 
