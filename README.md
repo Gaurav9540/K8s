@@ -357,7 +357,7 @@ Check current user
 kubectl config get-contexts
 ```
 
-Switching to the spiderman user:
+6. Switching to the spiderman user:
 ```ssh
 kubectl config use-context spiderman
 ```
@@ -365,3 +365,18 @@ kubectl config use-context spiderman
 <hr>
 
 **Grant access to the user**
+
+7. Create a Role
+
+role.yml:
+```ssh
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "create", "watch", "list"]
+```
