@@ -278,4 +278,6 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
 <hr>
 <hr>
 
-RBAC - 
+RBAC - Role Based Access Control
+
+Kubernetes RBAC is a key security control to ensure that cluster users and workloads have only the access to resources required to execute their roles.
