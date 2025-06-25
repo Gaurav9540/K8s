@@ -311,6 +311,8 @@ It lets you control access based on:  <br>
 |  Failure case      | ❌ You’re treated as `system:anonymous` | ❌ You’re told: "pods is forbidden..."   |
 ```
 
+<hr>
+
 **Create a client certificate**
 
 1. Generate a private key using OpenSSL:
@@ -382,3 +384,30 @@ rules:
 ```
 
 "In the above Role, if we attach it to a user, that user can only perform get, watch, and list actions on pods."
+
+
+8. Create a BindingRole
+
+bindrole.yml:
+```ssh
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-pods
+  namespace: default
+subjects:
+- kind: User
+  name: spiderman 
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role 
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+```
+
+Deploy both the role.yaml and role-binding.yaml to k8s
+
+
+9. Testing
+
+check spiderman user can list pods or not 
