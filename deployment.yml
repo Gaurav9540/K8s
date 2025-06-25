@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: firstdeploy
+  labels:
+    name: firstdeploy
+  annotations:
+    kubernetes.io/change-cause: added my custom record
+spec:
+  replicas: 4
+  minReadySeconds: 5
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      name: dpod
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: container
+          image: nginx
+          ports:
+            - containerPort: 80
