@@ -378,5 +378,7 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["pods"]
-  verbs: ["get", "create", "watch", "list"]
+  verbs: ["get", "watch", "list"]
 ```
+
+"In the above Role, if we attach it to a user, that user can only perform get, watch, and list actions on pods."
