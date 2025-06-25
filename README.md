@@ -273,4 +273,9 @@ Kubernetes objects define and manage the state of your cluster, controlling how 
    4.3 LimitRange
     - Sets default and maximum resource limits for containers in a namespace.
     - Prevents overuse of resources by individual pods.
-   
+
+
+<hr>
+RBAC
+<hr>
+
