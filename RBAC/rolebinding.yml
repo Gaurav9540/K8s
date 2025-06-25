@@ -5,7 +5,7 @@ metadata:
   namespace: default
 subjects:
 - kind: User
-  name: spider 
+  name: spiderman 
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role 
