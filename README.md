@@ -346,6 +346,8 @@ kubectl config set-credentials spiderman --client-certificate=spider.crt --clien
 kubectl config set-context spiderman --cluster=minikube --user=spiderman --namespace=default
 ```
 
+<hr>
+
 Check that it is successfully added to kubeconfig:
 ```ssh
 kubectl config view
