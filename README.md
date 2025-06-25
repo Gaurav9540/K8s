@@ -328,6 +328,7 @@ openssl req -new -key spider.key -out spider.csr
 openssl x509 -req -in spider.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out spider.crt -days 365
 ```
 
+<hr>
 
 **Create a user**
 
@@ -361,5 +362,6 @@ Switching to the spiderman user:
 kubectl config use-context spiderman
 ```
 
+<hr>
 
 **Grant access to the user**
