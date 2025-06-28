@@ -489,6 +489,7 @@ mv linux-amd64/helm /usr/local/bin/helm
 helm version
 ```
 
+<hr>
 
 Initialize Helm Chart Repository:
 
