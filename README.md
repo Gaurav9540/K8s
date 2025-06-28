@@ -434,5 +434,12 @@ Check spiderman user can list pods or not and check with non allowed permissions
 <hr>
 <hr>
 
-**Helm Chart**
+**Helm Chart**  <br>
 A Helm Chart is a package manager format for Kubernetes. Think of it like apt for Ubuntu or yum for CentOS — but for Kubernetes applications.
+
+🚀 **Why Use Helm?**
+
+ - Kubernetes manifests (YAML files) can become complex when deploying large apps. Helm solves this by:
+ - Grouping Kubernetes manifests into a single package (Chart).
+ - Allowing templating, so you can reuse and customize configs.
+ - Managing versioning, rollbacks, and releases easily.
