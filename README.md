@@ -463,26 +463,64 @@ mychart/
 └── README.md           # Optional documentation
 ```
 
-*Helm Installation for ubuntu*
+*Helm Installation for ubuntu :*
 
+1. select package:
+ 
 ```ssh
 curl -O https://get.helm.sh/helm-v3.18.3-linux-amd64.tar.gz
 ```
 
-unzip the package:
+2. unzip the package:
 
 ```ssh
 tar -xzvf tar -zxvf helm-v3.18.3-linux-amd64.tar.gz
 ```
 
-Find the helm binary in the unpacked directory, and move it to its desired destination
+3. find the helm binary in the unpacked directory, and move it to its desired destination
 
 ```ssh
 mv linux-amd64/helm /usr/local/bin/helm
 ```
 
-Check
+4. check
 
 ```ssh
 helm version
 ```
+
+
+Initialize Helm Chart Repository:
+
+```ssh
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+```ssh
+helm repo update
+```
+
+```ssh
+helm install bitnami/mysql --generate-name
+```
+
+```ssh
+helm install bitnami/nginx --generate-name
+```
+
+list installations:
+
+```ssh
+helm list
+```
+
+Uninstall a Release:
+
+```ssh
+helm uninstall <release-id>
+```
+
+Check Status:
+
+```ssh
+helm status <release-id>
