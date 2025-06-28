@@ -462,3 +462,27 @@ mychart/
 ├── charts/             # Subcharts (dependencies)
 └── README.md           # Optional documentation
 ```
+
+*Helm Installation for ubuntu*
+
+```ssh
+curl -O https://get.helm.sh/helm-v3.18.3-linux-amd64.tar.gz
+```
+
+unzip the package:
+
+```ssh
+tar -xzvf tar -zxvf helm-v3.18.3-linux-amd64.tar.gz
+```
+
+Find the helm binary in the unpacked directory, and move it to its desired destination
+
+```ssh
+mv linux-amd64/helm /usr/local/bin/helm
+```
+
+Check
+
+```ssh
+helm version
+```
