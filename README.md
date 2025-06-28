@@ -443,3 +443,19 @@ A Helm Chart is a package manager format for Kubernetes. Think of it like apt fo
  - Grouping Kubernetes manifests into a single package (Chart).
  - Allowing templating, so you can reuse and customize configs.
  - Managing versioning, rollbacks, and releases easily.
+
+
+🧱 **Helm Chart Components**  <br>
+A Helm chart is a directory structure that looks like:
+
+```ssh
+mychart/
+├── Chart.yaml          # Metadata about the chart
+├── values.yaml         # Default values for the templates
+├── templates/          # YAML templates for Kubernetes resources
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── ...
+├── charts/             # Subcharts (dependencies)
+└── README.md           # Optional documentation
+```
